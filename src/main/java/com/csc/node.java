@@ -1,22 +1,23 @@
 package com.csc;
 
-public class node {
-    node left, right;
+public class node<T> {
+    
+    node<T> left, right;
 
-    public node(Squirrel name) {
+    public node(T name) {
     }
 
-    public void insertleft(Squirrel travel) {
+    public void insertleft(T travel) {
         if (left == null)
-            left = new node(travel);
+            left = new node<>(travel);
         else
             left.insertleft(travel);
 
     }
 
-    public void insertright(Squirrel travel) {
+    public  void insertright(T travel) {
         if (right == null)
-            right = new node(travel);
+            right = new node<>(travel);
         else
             right.insertright(travel);
     }
